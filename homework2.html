@@ -1,0 +1,151 @@
+<html>
+<head>
+<script type="text/javascript">
+function validate() {
+	
+	
+	
+	var memId = document.getElementById("memId").value;
+    var memPwd = document.getElementById("memPwd").value;
+    var memName = document.getElementById("memName").value;
+    var gender = $("input:radio]");
+    var job = document.getElementById("job").value;
+    var memName = document.getElementById("memName").value;
+    var memName = document.getElementById("memName").value;
+    var memName = document.getElementById("memName").value;
+	
+	 if(memId=="") {
+         alert("이름을 입력해 주세요");
+         document.getElementById("m;emId").focus();
+         return false;
+     }
+	 if(memPwd=="") {
+         alert("패스워드를 입력해 주세요");
+         document.getElementById("memPwd").focus();
+         return false;
+     }
+	 if(memName=="") {
+         alert("회원명을 입력해 주세요");
+         document.getElementById("memName").focus();
+         return false;
+     }
+	 
+	var memberInfo = memId   +  
+	                 memPwd  +  
+	                 memName +
+	                 job  ; 
+	 
+	
+	
+	document.getElementById("memInfo").innerHTML = memberInfo;
+
+	 
+}
+function fnRadioName(){
+    var radioId = $('input[name="COLOR"]:checked').val();
+    var rasioNm = $("label[for='"+radioId+"']").text(); // 라벨값을 불러온다.
+    alert(rasioNm);
+}
+
+
+
+	
+</script>
+
+</head>
+<body>
+	<br/>
+	<h2>회원가입</h2>
+	<br/>
+	<br/>
+	<!-- 회원정보 -->
+	<div>
+		<table border="1" cellpadding="0" cellspacing="0" width="35%" height="35%">
+			<tr>
+				<td align="center" style="background-color:skyblue;">ID</td> 
+				<td style="padding-left:15px;"><input type="text" name="memId" id="memId"/>(필수)</td>
+			</tr>
+			<tr>
+				<td align="center" style="background-color:skyblue;">PWD</td> 
+				<td style="padding-left:15px;"><input type="text" name="memPwd" id="memPwd"/>(필수)</td>
+			</tr>
+			<tr>
+				<td align="center" style="background-color:skyblue;">회원명</td> 
+				<td style="padding-left:15px;"><input type="text" name="memName" id="memName"/>(필수)</td>
+			</tr>
+			<tr>
+				<td align="center" style="background-color:skyblue;">성별</td>
+				<td style="padding-left:15px;">
+					여자:<input type="radio" name="gender" value="W" checked>
+					남자:<input type="radio" name="gender" value="M">
+				</td>
+			</tr>
+			<tr>
+				<td align="center" style="background-color:skyblue;">직업</td>
+				<td style="padding-left:15px;">
+					<select name="job" id="job">
+						<option value="">선택하세요</option>
+						<option value="1">회사원</option>
+						<option value="2">학생</option>
+						<option value="3">주부</option>
+						<option value="4">자영업</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td align="center" style="background-color:skyblue;">관심사</td>
+				<td style="padding-left:15px;">
+					쇼핑<input type="checkBox" name="favorite" value="shopping">
+					게임<input type="checkBox" name="favorite" value="game">
+					책<input type="checkBox" name="favorite" value="book">
+					여행<input type="checkBox" name="favorite" value="tour">
+					투자<input type="checkBox" name="favorite" value="invest">
+				</td>
+			</tr>
+			<tr>
+				<td align="center" style="background-color:skyblue;">핸드폰번호</td> 
+				<td style="padding-left:15px;">			
+					<input type="text" name="phone1" id="phone1" maxlength="3" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"/>-
+					<input type="text" name="phone2" id="phone2" maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"/>-
+					<input type="text" name="phone3" id="phone3" maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"/>
+				</td>
+			</tr>
+			<tr>
+				<td align="center" style="background-color:skyblue;">주소</td>
+				<td style="padding-left:15px;">
+					<input type="text" name="address" id="address" size="70" maxlength="40">
+				</td>
+			</tr>
+		</table>
+	<div>
+	<!-- 회원정보 -->
+
+	<br/>
+	<br/>
+	
+	<!--버튼영역-->
+	<div>
+		<table style="padding-left:335px;">
+			<tr>
+				<td><input type="button" name="btn1" onclick="validate();" value="저장"></td>
+				<td><input type="button" name="btn2" value="초기화"></td>
+			</tr>
+		</table>
+	</div>
+	<!--버튼영역-->
+	
+	<br/>
+	<br/>
+	
+	<h2>가입내역</h2>
+	
+	<!--가입내용-->
+	<div id="memInfo" style="color:pink; border:1px;">
+		
+		
+	<div>
+	<!--가입내용-->
+	
+</body>
+
+</html>
